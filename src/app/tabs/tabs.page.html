@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color='primary'>
+    <ion-title>Current Tabs</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item detail *ngFor="let tab of tabs" (click)="presentActionSheet()" >
+      <ion-label>
+        {{tab.name}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
